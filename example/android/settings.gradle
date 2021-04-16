@@ -1,0 +1,6 @@
+rootProject.name = 'SkelletonExample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':reactnativeskelleton'
+project(':reactnativeskelleton').projectDir = new File(rootProject.projectDir, '../../android')
