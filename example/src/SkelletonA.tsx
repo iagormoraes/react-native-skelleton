@@ -1,31 +1,37 @@
-import SkelletonView from 'react-native-skelleton';
+import SkelletonView, { SkelletonGroupView } from 'react-native-skelleton';
 import { View, ViewStyle } from 'react-native';
 import * as React from 'react';
 
 function SkelletonA({ style }: { style: ViewStyle }) {
   return (
-    <SkelletonView
-      color="red"
-      repeatCount={-1}
-      repeatMode={1}
-      duration={1000}
+    <SkelletonGroupView
+      duration={3000}
       interpolator="BounceInterpolator"
-      style={{
-        ...style,
-        backgroundColor: '#C3C3C3',
-      }}
+      style={style}
     >
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <SkelletonView
+        color="red"
+        repeatCount={-1}
+        repeatMode={1}
+        style={{
+          ...style,
+          backgroundColor: '#C3C3C3',
+        }}
+      >
         <View
-          style={{
-            width: 10,
-            height: 10,
-            alignSelf: 'center',
-            backgroundColor: 'yellow',
-          }}
-        />
-      </View>
-    </SkelletonView>
+          style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+        >
+          <View
+            style={{
+              width: 10,
+              height: 10,
+              alignSelf: 'center',
+              backgroundColor: 'yellow',
+            }}
+          />
+        </View>
+      </SkelletonView>
+    </SkelletonGroupView>
   );
 }
 

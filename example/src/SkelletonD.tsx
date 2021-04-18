@@ -6,6 +6,7 @@ function SkelletonD({ style }: { style: ViewStyle }) {
   return (
     <SkelletonView
       color="#00000000"
+      autoStart
       repeatCount={-1}
       repeatMode={1}
       duration={1000}

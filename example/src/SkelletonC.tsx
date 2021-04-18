@@ -6,10 +6,9 @@ import type { ViewStyle } from 'react-native';
 function SkelletonC({ style }: { style: ViewStyle }) {
   return (
     <SkelletonView
-      color="#00000000"
       repeatCount={-1}
       repeatMode={1}
-      duration={1000}
+      autoStart
       style={{
         ...style,
         backgroundColor: '#C3C3C3',

@@ -10,7 +10,7 @@ export default function App() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={{ fontSize: 26, marginBottom: 16 }}>RN-Skelleton</Text>
-      {new Array(1).fill(undefined).map((_, index) => (
+      {new Array(10).fill(undefined).map((_, index) => (
         <React.Fragment key={index}>
           <ProfileSkelleton />
           <ProfileSkelleton />
@@ -102,6 +102,7 @@ export default function App() {
               }}
             />
           </View>
+          <View style={styles.space} />
         </React.Fragment>
       ))}
     </ScrollView>

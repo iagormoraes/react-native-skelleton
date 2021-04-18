@@ -12,6 +12,6 @@ class SkelletonPackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-        return listOf(SkelletonViewManager())
+        return listOf(SkelletonViewManager(), SkelletonGroupViewManager())
     }
 }

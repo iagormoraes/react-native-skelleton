@@ -23,9 +23,18 @@ export type SkelletonInterpolator =
   | 'LinearInterpolator'
   | 'OvershootInterpolator';
 
+export type SkelletonGroupProps = {
+  children?: React.ReactElement | React.ReactElement[];
+  duration?: number;
+  startDelay?: number;
+  interpolator?: SkelletonInterpolator;
+  style?: ViewStyle;
+};
+
 export type SkelletonProps = {
-  children?: React.ReactElement;
-  color: string;
+  children?: React.ReactElement | React.ReactElement[];
+  color?: string;
+  autoStart?: boolean;
   duration?: number;
   startDelay?: number;
   repeatDelay?: number;
@@ -39,10 +48,18 @@ export const SkelletonViewManager = requireNativeComponent<SkelletonProps>(
   'SkelletonView'
 );
 
+export const SkelletonGroupManager = requireNativeComponent<SkelletonGroupProps>(
+  'SkelletonGroupView'
+);
+
 const styles = StyleSheet.create({
   container: { overflow: 'hidden' },
   skelleton: { flex: 1 },
 });
+
+export function SkelletonGroupView(props: SkelletonGroupProps) {
+  return <SkelletonGroupManager {...props} />;
+}
 
 function SkelletonView({ style, ...skelletonProps }: SkelletonProps) {
   return (
