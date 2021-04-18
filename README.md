@@ -50,7 +50,7 @@ export type SkelletonInterpolator =
   | 'LinearInterpolator'
   | 'OvershootInterpolator';
 
-type SkelletonProps = {
+export type SkelletonProps = {
   children?: React.ReactElement;
   color: string;
   duration?: number;
