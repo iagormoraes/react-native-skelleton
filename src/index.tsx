@@ -32,7 +32,7 @@ type SkelletonProps = {
   repeatMode?: SkelletonRepeatMode.RESTART | SkelletonRepeatMode.REVERSE;
   repeatCount?: number;
   interpolator?: SkelletonInterpolator;
-  style: ViewStyle;
+  style?: ViewStyle;
 };
 
 export const SkelletonViewManager = requireNativeComponent<SkelletonProps>(
