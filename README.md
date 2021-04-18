@@ -2,6 +2,8 @@
 
 A skelleton solution done in native view, with it you can wrap any view component to enhance your user experience.
 
+<img src="./rn-skelleton example.gif" width="400px"/>
+
 ## Installation
 
 ```sh
